@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; color: var(--fg); }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 18px; }
+  .row { display: flex; gap: 24px; }
+  .frame { flex: 1; background: var(--ink-700); position: relative; aspect-ratio: 4 / 3; border: 1px solid var(--border-faint); display: flex; align-items: center; justify-content: center; color: var(--paper-300); font-family: var(--font-mincho); font-size: 14px; }
+  .frame::before, .frame::after { content: ""; position: absolute; left: 0; right: 0; height: 8px; display: flex; }
+  .frame::before { top: 0; background-image: repeating-linear-gradient(to right, var(--bg) 0 8px, transparent 8px 18px); }
+  .frame::after  { bottom: 0; background-image: repeating-linear-gradient(to right, var(--bg) 0 8px, transparent 8px 18px); }
+  .mat { position: relative; padding: 10px; border: 1px solid var(--border-faint); flex: 1; }
+  .mat .frame { aspect-ratio: 4 / 3; }
+  .cap { font-family: var(--font-mono); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.16em; margin-top: 8px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">14 / Image frame & mat-board</div>
+  <div class="row">
+    <div style="flex:1;">
+      <div class="frame">[ FILM PLACEHOLDER ]</div>
+      <div class="cap">FRAME · perforations top/bottom</div>
+    </div>
+    <div class="mat">
+      <div class="frame">[ MATTED ]</div>
+      <div class="cap" style="margin-top:10px;">MAT · 1px hairline · 8px offset</div>
+    </div>
+  </div>
+</div>
+</body></html>

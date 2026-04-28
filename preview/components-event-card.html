@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 18px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .ev { background: var(--bg-elev); padding: 18px 20px; border: 1px solid var(--border-faint); box-shadow: var(--inset-line-top); }
+  .ev .num { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); }
+  .ev .date { font-family: var(--font-pixel); font-size: 17px; color: var(--gold-soft); margin-top: 12px; letter-spacing: 0.06em; }
+  .ev .title { font-family: var(--font-mincho); font-weight: 600; font-size: 21px; color: var(--fg); margin-top: 8px; letter-spacing: 0.06em; }
+  .ev .meta { font-family: var(--font-gothic); font-size: 12px; color: var(--fg-faint); margin-top: 10px; line-height: 1.7; }
+  .ev .meta .dot { color: var(--paper-300); margin: 0 6px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">12 / Event card</div>
+  <div class="grid">
+    <div class="ev">
+      <div class="num">01 / SHINKAN</div>
+      <div class="date">2026.04.12  TUE</div>
+      <div class="title">部室開放、はじまり</div>
+      <div class="meta">19:00 — 22:00<span class="dot">·</span>308号室<br/>珈琲と、すこしのおかし。</div>
+    </div>
+    <div class="ev">
+      <div class="num">02 / SHINKAN</div>
+      <div class="date">2026.04.16  SAT</div>
+      <div class="title">深夜の暗室会</div>
+      <div class="meta">21:00 — 翌3:00<span class="dot">·</span>地下暗室<br/>白黒フィルム持ち込み歓迎。</div>
+    </div>
+  </div>
+</div>
+</body></html>

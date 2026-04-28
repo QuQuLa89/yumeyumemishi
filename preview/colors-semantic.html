@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 24px 28px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 14px; }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 8px 0; font-family: var(--font-mono); font-size: 12px; border-bottom: 1px solid var(--border-faint); vertical-align: middle; }
+  td:nth-child(1) { color: var(--paper-200); width: 28%; letter-spacing: 0.12em; }
+  td:nth-child(2) { width: 14%; }
+  td:nth-child(2) .chip { display: inline-block; width: 22px; height: 22px; vertical-align: middle; border: 1px solid var(--border-faint); }
+  td:nth-child(3) { color: var(--fg-faint); font-size: 11px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">03 / Semantic tokens</div>
+  <table>
+    <tr><td>--bg</td><td><span class="chip" style="background:#0a0d12"></span></td><td>page background</td></tr>
+    <tr><td>--bg-elev</td><td><span class="chip" style="background:#11151c"></span></td><td>card / panel</td></tr>
+    <tr><td>--bg-elev-2</td><td><span class="chip" style="background:#181d26"></span></td><td>elevated card</td></tr>
+    <tr><td>--fg</td><td><span class="chip" style="background:#f4ede0"></span></td><td>primary text</td></tr>
+    <tr><td>--fg-muted</td><td><span class="chip" style="background:#c8bfac"></span></td><td>body / secondary</td></tr>
+    <tr><td>--fg-faint</td><td><span class="chip" style="background:#8c8472"></span></td><td>captions / labels</td></tr>
+    <tr><td>--accent</td><td><span class="chip" style="background:#b8341f"></span></td><td>primary action (朱)</td></tr>
+    <tr><td>--gold</td><td><span class="chip" style="background:#a88a3d"></span></td><td>dates / emphasis</td></tr>
+    <tr><td>--border</td><td><span class="chip" style="background:#232936"></span></td><td>hairlines</td></tr>
+  </table>
+</div>
+</body></html>

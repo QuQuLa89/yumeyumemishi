@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card {
+    width: 700px; padding: 24px 28px; box-sizing: border-box;
+    position: relative; overflow: hidden;
+  }
+  .grain {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg');
+    background-size: 240px 240px; opacity: 0.08; mix-blend-mode: overlay;
+  }
+  .row { display: flex; gap: 0; align-items: stretch; border: 1px solid var(--border-faint); }
+  .sw { flex: 1; height: 88px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px 10px; box-sizing: border-box; }
+  .sw .name { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; }
+  .sw .hex { font-family: var(--font-mono); font-size: 9px; opacity: 0.7; margin-top: 2px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 10px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">01 / Ink — page background family</div>
+  <div class="row">
+    <div class="sw" style="background:#0a0d12;color:#f4ede0"><div class="name">ink-900</div><div class="hex">#0a0d12</div></div>
+    <div class="sw" style="background:#11151c;color:#f4ede0"><div class="name">ink-800</div><div class="hex">#11151c</div></div>
+    <div class="sw" style="background:#181d26;color:#f4ede0"><div class="name">ink-700</div><div class="hex">#181d26</div></div>
+    <div class="sw" style="background:#232936;color:#f4ede0"><div class="name">ink-600</div><div class="hex">#232936</div></div>
+    <div class="sw" style="background:#2e3543;color:#f4ede0"><div class="name">ink-500</div><div class="hex">#2e3543</div></div>
+    <div class="sw" style="background:#3a4252;color:#f4ede0"><div class="name">ink-400</div><div class="hex">#3a4252</div></div>
+  </div>
+</div>
+</body></html>

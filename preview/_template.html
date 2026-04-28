@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<title>Card</title>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card {
+    width: 700px;
+    padding: 28px 32px;
+    box-sizing: border-box;
+    position: relative;
+    background:
+      url('../assets/textures/grain.svg'),
+      var(--bg);
+    background-blend-mode: overlay;
+  }
+  .grain {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg');
+    background-size: 240px 240px;
+    opacity: var(--grain-opacity);
+    mix-blend-mode: screen;
+  }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <slot></slot>
+</div>
+</body></html>

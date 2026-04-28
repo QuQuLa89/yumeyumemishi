@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 22px; }
+  .row { display: flex; align-items: center; gap: 32px; }
+  .mark { width: 96px; height: 96px; flex-shrink: 0; border: 1px solid var(--border-faint); padding: 6px; box-sizing: border-box; }
+  .word { display: flex; flex-direction: column; }
+  .ja { font-family: var(--font-mincho); font-weight: 700; font-size: 56px; letter-spacing: 0.08em; line-height: 1; color: var(--fg); }
+  .en { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.4em; color: var(--fg-faint); margin-top: 12px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">16 / Logo — wordmark & square mark</div>
+  <div class="row">
+    <img class="mark" src="../assets/logos/mark.svg" alt="夜"/>
+    <div class="word">
+      <div class="ja">夜半</div>
+      <div class="en">YOWA · MIDNIGHT CIRCLE EST. 1998</div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 18px; }
+  .stack > * + * { margin-top: 14px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-family: var(--font-mono); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.16em; text-transform: uppercase; }
+  .input { background: transparent; color: var(--paper-50); border: 0; border-bottom: 1px solid var(--border-strong); padding: 8px 0 10px; font-family: var(--font-gothic); font-size: 16px; outline: none; transition: border-color 240ms; }
+  .input:focus { border-bottom-color: var(--shu-300); }
+  .input::placeholder { color: var(--fg-faint); }
+  .check { display: flex; align-items: center; gap: 10px; font-family: var(--font-gothic); font-size: 14px; color: var(--fg-muted); }
+  .check .box { width: 16px; height: 16px; border: 1px solid var(--border-strong); display: inline-flex; align-items: center; justify-content: center; }
+  .check .box .dot { width: 6px; height: 6px; background: var(--shu-500); }
+  .tag { display: inline-block; font-family: var(--font-mono); font-size: 10px; padding: 4px 10px; border: 1px solid var(--border-strong); color: var(--paper-200); letter-spacing: 0.16em; margin-right: 6px; border-radius: 999px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">11 / Form fields & tags</div>
+  <div class="stack">
+    <div class="field">
+      <label>NAMAE / 名前</label>
+      <input class="input" placeholder="あなたの名前" value="西垣 真依"/>
+    </div>
+    <div class="field">
+      <label>RENRAKU / 連絡先</label>
+      <input class="input" placeholder="メール、または学籍番号"/>
+    </div>
+    <div class="check"><span class="box"><span class="dot"></span></span>新歓のしらせを受け取る</div>
+    <div style="padding-top: 10px;">
+      <span class="tag">写真</span><span class="tag">文芸</span><span class="tag">夜あそび</span><span class="tag">珈琲</span>
+    </div>
+  </div>
+</div>
+</body></html>

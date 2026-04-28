@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect x="2" y="2" width="116" height="116" fill="#0a0d12" stroke="#e8e0cf" stroke-width="1" opacity="1"></rect>
+  <rect x="8" y="8" width="104" height="104" fill="none" stroke="#e8e0cf" stroke-width="0.5" opacity="0.4"></rect>
+  <text x="60" y="82" text-anchor="middle" font-family="&#39;Shippori Mincho&#39;, &#39;Hiragino Mincho ProN&#39;, serif" font-weight="700" font-size="72" fill="#f4ede0">夜</text>
+</svg>

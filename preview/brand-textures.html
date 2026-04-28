@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .swatch { padding: 16px 18px; box-sizing: border-box; min-height: 110px; position: relative; overflow: hidden; }
+
+  .grain-demo { background: var(--ink-900); border: 1px solid var(--border-faint); }
+  .grain-demo .o { position: absolute; inset: 0;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.18; mix-blend-mode: overlay; }
+  .scan-demo { background: var(--ink-800); border: 1px solid var(--border-faint); }
+  .scan-demo .o { position: absolute; inset: 0;
+    background-image: url('../assets/textures/scanline.svg'); background-size: 4px 4px;
+    opacity: 0.5; mix-blend-mode: overlay; }
+  .vignette { background: radial-gradient(ellipse at center, #2c1a14 0%, #0a0d12 78%); border: 1px solid var(--border-faint); }
+  .none { background: var(--ink-900); border: 1px solid var(--border-faint); }
+  .name { font-family: var(--font-mono); font-size: 11px; color: var(--paper-100); letter-spacing: 0.2em; position: relative; z-index: 2; }
+  .desc { font-family: var(--font-gothic); font-size: 11px; color: var(--fg-faint); margin-top: 8px; position: relative; z-index: 2; line-height: 1.7; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">17 / Texture & atmosphere</div>
+  <div class="grid">
+    <div class="swatch grain-demo"><div class="o"></div><div class="name">GRAIN · 6%</div><div class="desc">SVG turbulence overlay. Always on, except during photo display.</div></div>
+    <div class="swatch scan-demo"><div class="o"></div><div class="name">SCANLINE · 4%</div><div class="desc">Optional. Hero sections, headers — evokes CRT/VHS.</div></div>
+    <div class="swatch vignette"><div class="name">VIGNETTE</div><div class="desc">Radial warm-center → dark-edge. Used around hero imagery.</div></div>
+    <div class="swatch none"><div class="name">FLAT INK</div><div class="desc">Default panel state. No gradient, no shadow.</div></div>
+  </div>
+</div>
+</body></html>

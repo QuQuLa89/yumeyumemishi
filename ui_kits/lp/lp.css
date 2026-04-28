@@ -1,0 +1,98 @@
+/* page styles for the LP demo */
+@import url('../../colors_and_type.css');
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-gothic);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* persistent grain overlay */
+.page-grain {
+  position: fixed; inset: 0; pointer-events: none; z-index: 100;
+  background-image: url('../../assets/textures/grain.svg');
+  background-size: 240px 240px;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+}
+
+/* container */
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 48px; }
+
+/* section common */
+section { position: relative; padding: 96px 0; border-bottom: 1px solid var(--border-faint); }
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  color: var(--fg-faint);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.section-num b { color: var(--paper-200); font-weight: 500; margin-left: 6px; }
+
+/* tategaki side label */
+.tate-rail {
+  position: absolute;
+  right: 24px;
+  top: 96px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-mincho);
+  font-size: 14px;
+  letter-spacing: 0.5em;
+  color: var(--paper-300);
+  opacity: 0.7;
+}
+
+/* button */
+.btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  height: 52px; padding: 0 28px;
+  font-family: var(--font-mincho);
+  font-weight: 600; font-size: 17px;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 240ms cubic-bezier(0.22,0.61,0.36,1);
+  border-radius: 2px;
+  text-decoration: none;
+}
+.btn-primary { background: var(--shu-500); color: var(--paper-50); border: 1px solid var(--shu-400); }
+.btn-primary:hover { background: var(--shu-400); box-shadow: var(--shadow-glow-shu); }
+.btn-ghost { background: transparent; color: var(--paper-50); border: 1px solid var(--border-strong); }
+.btn-ghost:hover { border-color: var(--paper-200); background: rgba(244,237,224,0.04); }
+.btn .arr { font-family: var(--font-mono); font-size: 16px; }
+
+/* film-frame placeholder */
+.film {
+  position: relative;
+  background: var(--ink-700);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--paper-300);
+  font-family: var(--font-mincho);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  overflow: hidden;
+}
+.film::before, .film::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 10px;
+  background-image: repeating-linear-gradient(to right,
+    var(--ink-900) 0 10px, transparent 10px 22px);
+}
+.film::before { top: 0; }
+.film::after { bottom: 0; }
+.film .vignette {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+}
+.film .scan {
+  position: absolute; inset: 0;
+  background-image: url('../../assets/textures/scanline.svg');
+  background-size: 4px 4px;
+  opacity: 0.18; mix-blend-mode: overlay; pointer-events: none;
+}

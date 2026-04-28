@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 18px; }
+  .row { display: flex; align-items: baseline; gap: 18px; padding: 12px 0; border-bottom: 1px solid var(--border-faint); }
+  .row:last-child { border-bottom: 0; }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--fg-faint); width: 110px; flex-shrink: 0; letter-spacing: 0.12em; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">05 / Body — Zen Kaku Gothic New</div>
+  <div class="row">
+    <div class="meta">20 / 500</div>
+    <div style="font-family: var(--font-gothic); font-weight: 500; font-size: 20px; color: var(--fg); letter-spacing: 0.08em;">部室の灯りはいつもついている</div>
+  </div>
+  <div class="row">
+    <div class="meta">17 / 400</div>
+    <div style="font-family: var(--font-gothic); font-weight: 400; font-size: 17px; line-height: 1.85; color: var(--fg-muted);">深夜、誰もいない部室で、フィルムを巻き戻す音だけがしている。</div>
+  </div>
+  <div class="row">
+    <div class="meta">15 / 400</div>
+    <div style="font-family: var(--font-gothic); font-weight: 400; font-size: 15px; line-height: 1.85; color: var(--fg-muted);">来てもいいし、来なくてもいい。ただ、灯りはつけておきます。</div>
+  </div>
+  <div class="row">
+    <div class="meta">13 / 300</div>
+    <div style="font-family: var(--font-gothic); font-weight: 300; font-size: 13px; color: var(--fg-faint); letter-spacing: 0.04em;">人文学部棟 3F 308号室 / 毎週火・金 19:00–</div>
+  </div>
+</div>
+</body></html>

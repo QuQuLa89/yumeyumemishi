@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 18px; }
+
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border: 1px solid var(--border-faint); background: rgba(10,13,18,0.72); backdrop-filter: blur(8px); margin-bottom: 18px; }
+  .nav .brand { font-family: var(--font-mincho); font-weight: 700; font-size: 22px; letter-spacing: 0.08em; color: var(--fg); }
+  .nav ul { list-style: none; display: flex; gap: 24px; padding: 0; margin: 0; }
+  .nav li a { font-family: var(--font-gothic); font-size: 13px; color: var(--paper-200); text-decoration: none; letter-spacing: 0.12em; }
+  .nav li a:hover { color: var(--shu-300); }
+  .nav .num { font-family: var(--font-mono); font-size: 9px; color: var(--fg-faint); margin-right: 6px; letter-spacing: 0.16em; }
+
+  .crumb { font-family: var(--font-mono); font-size: 11px; color: var(--fg-faint); letter-spacing: 0.16em; }
+  .crumb .sep { color: var(--paper-400); margin: 0 8px; }
+  .crumb .now { color: var(--paper-100); }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">13 / Navigation</div>
+  <div class="nav">
+    <div class="brand">夜半</div>
+    <ul>
+      <li><a href="#"><span class="num">01</span>序</a></li>
+      <li><a href="#"><span class="num">02</span>部室</a></li>
+      <li><a href="#"><span class="num">03</span>新歓</a></li>
+      <li><a href="#"><span class="num">04</span>居る人</a></li>
+      <li><a href="#"><span class="num">05</span>手紙</a></li>
+    </ul>
+  </div>
+  <div class="crumb">YOWA<span class="sep">/</span>SHINKAN<span class="sep">/</span><span class="now">2026 SPRING</span></div>
+</div>
+</body></html>

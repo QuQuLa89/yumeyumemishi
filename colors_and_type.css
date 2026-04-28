@@ -1,0 +1,239 @@
+/* ============================================================
+   夜半 (Yowa) — Design Tokens
+   Dark, nostalgic university circle (大学サークル) aesthetic
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Kurenaido&family=DotGothic16&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ===== COLOR — Foundations ===== */
+  /* Ink: deep blue-black, like a darkroom */
+  --ink-900: #0a0d12;        /* page bg, deepest */
+  --ink-800: #11151c;        /* card bg */
+  --ink-700: #181d26;        /* elevated card */
+  --ink-600: #232936;        /* divider/border base */
+  --ink-500: #2e3543;        /* hover/border accent */
+  --ink-400: #3a4252;        /* muted line */
+
+  /* Paper: warm off-white, slightly aged */
+  --paper-50:  #f4ede0;      /* primary fg (warm cream) */
+  --paper-100: #e8e0cf;
+  --paper-200: #c8bfac;      /* secondary fg */
+  --paper-300: #8c8472;      /* tertiary fg */
+  --paper-400: #5a5446;      /* disabled / faint */
+
+  /* Accent — 朱 (vermillion), the only chromatic warmth */
+  --shu-900: #3a0d09;
+  --shu-700: #7a1a12;
+  --shu-500: #b8341f;        /* primary accent */
+  --shu-400: #d4533a;        /* hover */
+  --shu-300: #e87a5f;        /* highlight */
+
+  /* Accent — 群青 (gunjō, deep blue), used sparingly for links/info */
+  --gunjo-700: #1a2a4a;
+  --gunjo-500: #2c4a7c;
+  --gunjo-300: #6b8bb5;
+
+  /* Accent — 鈍金 (dull gold), for emphasis on dates/numerics */
+  --kin-700: #6b5520;
+  --kin-500: #a88a3d;
+  --kin-300: #d4b878;
+
+  /* ===== Semantic colors ===== */
+  --bg:           var(--ink-900);
+  --bg-elev:      var(--ink-800);
+  --bg-elev-2:    var(--ink-700);
+  --bg-overlay:   rgba(10, 13, 18, 0.72);
+
+  --fg:           var(--paper-50);
+  --fg-muted:     var(--paper-200);
+  --fg-faint:     var(--paper-300);
+  --fg-disabled:  var(--paper-400);
+
+  --border:       var(--ink-600);
+  --border-strong:var(--ink-500);
+  --border-faint: rgba(232, 224, 207, 0.08);
+
+  --accent:       var(--shu-500);
+  --accent-hover: var(--shu-400);
+  --accent-fg:    var(--paper-50);
+  --accent-soft:  rgba(184, 52, 31, 0.14);
+
+  --link:         var(--paper-50);
+  --link-hover:   var(--shu-300);
+  --link-decoration: rgba(232, 224, 207, 0.4);
+
+  --gold:         var(--kin-500);
+  --gold-soft:    var(--kin-300);
+
+  /* ===== TYPE — Families ===== */
+  --font-mincho:  'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif;
+  --font-gothic:  'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Noto Sans JP', sans-serif;
+  --font-hand:    'Zen Kurenaido', 'Hiragino Mincho ProN', cursive;
+  --font-pixel:   'DotGothic16', 'MS Gothic', monospace;
+  --font-mono:    'JetBrains Mono', 'Source Han Code JP', monospace;
+
+  /* ===== TYPE — Scale ===== */
+  --fs-xs:   12px;
+  --fs-sm:   13px;
+  --fs-base: 15px;
+  --fs-md:   17px;
+  --fs-lg:   20px;
+  --fs-xl:   24px;
+  --fs-2xl:  32px;
+  --fs-3xl:  44px;
+  --fs-4xl:  64px;
+  --fs-display: 96px;
+
+  /* ===== Spacing ===== */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* ===== Radii — restrained, almost-no-radius ===== */
+  --r-none: 0;
+  --r-xs:   1px;
+  --r-sm:   2px;
+  --r-md:   4px;
+  --r-pill: 999px;
+
+  /* ===== Shadow / Elevation ===== */
+  --shadow-1: 0 1px 0 rgba(244, 237, 224, 0.04) inset, 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-2: 0 1px 0 rgba(244, 237, 224, 0.05) inset, 0 8px 24px rgba(0,0,0,0.5);
+  --shadow-glow-shu: 0 0 24px rgba(184, 52, 31, 0.25), 0 0 1px rgba(184, 52, 31, 0.6);
+  --inset-line-top: inset 0 1px 0 rgba(244, 237, 224, 0.06);
+
+  /* ===== Motion ===== */
+  --ease-out:    cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:    140ms;
+  --dur-base:    240ms;
+  --dur-slow:    480ms;
+
+  /* ===== Texture ===== */
+  --grain-opacity: 0.06;
+  --scanline-opacity: 0.04;
+}
+
+/* ============================================================
+   Semantic typography
+   ============================================================ */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-gothic);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  font-feature-settings: "palt" 1; /* proportional kana */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.h-display, h1.display {
+  font-family: var(--font-mincho);
+  font-weight: 700;
+  font-size: var(--fs-display);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--fg);
+}
+
+.h1, h1 {
+  font-family: var(--font-mincho);
+  font-weight: 600;
+  font-size: var(--fs-3xl);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+}
+
+.h2, h2 {
+  font-family: var(--font-mincho);
+  font-weight: 600;
+  font-size: var(--fs-2xl);
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  color: var(--fg);
+}
+
+.h3, h3 {
+  font-family: var(--font-gothic);
+  font-weight: 500;
+  font-size: var(--fs-xl);
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  color: var(--fg);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.kicker {
+  font-family: var(--font-mincho);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.4em;
+  color: var(--shu-300);
+  /* tate-gaki ready */
+}
+
+p, .body {
+  font-family: var(--font-gothic);
+  font-size: var(--fs-base);
+  line-height: 1.85;
+  color: var(--fg-muted);
+}
+
+.body-lg {
+  font-size: var(--fs-md);
+  line-height: 1.9;
+}
+
+.caption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--fg-faint);
+  letter-spacing: 0.08em;
+}
+
+.hand {
+  font-family: var(--font-hand);
+  color: var(--paper-100);
+}
+
+.pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 0;
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  color: var(--gold-soft);
+}
+
+/* Vertical writing helper — shows up in section dividers */
+.tategaki {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-mincho);
+  letter-spacing: 0.4em;
+}
+
+a { color: var(--link); text-decoration: underline; text-decoration-color: var(--link-decoration); text-underline-offset: 4px; transition: color var(--dur-fast) var(--ease-out); }
+a:hover { color: var(--link-hover); text-decoration-color: var(--link-hover); }
+
+::selection { background: var(--shu-700); color: var(--paper-50); }

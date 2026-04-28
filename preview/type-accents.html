@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 18px; }
+  .row { display: flex; align-items: center; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--border-faint); }
+  .row:last-child { border-bottom: 0; }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--fg-faint); width: 130px; flex-shrink: 0; letter-spacing: 0.12em; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">06 / Accent fonts</div>
+
+  <div class="row">
+    <div class="meta">Hand · Kurenaido</div>
+    <div style="font-family: var(--font-hand); font-size: 22px; color: var(--paper-100);">写真と、ことばと、夜のあかり。</div>
+  </div>
+
+  <div class="row">
+    <div class="meta">Pixel · DotGothic16</div>
+    <div style="font-family: var(--font-pixel); font-size: 16px; color: var(--gold-soft);">2026.04.12 — 04.20</div>
+  </div>
+
+  <div class="row">
+    <div class="meta">Mono · JetBrains</div>
+    <div style="font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase;">01 / JO — INTRODUCTION</div>
+  </div>
+
+  <div class="row">
+    <div class="meta">Tategaki</div>
+    <div style="height: 90px;">
+      <div class="tategaki" style="font-size: 18px; color: var(--fg-muted); height: 90px;">新歓のしらせ・夜半</div>
+    </div>
+  </div>
+</div>
+</body></html>

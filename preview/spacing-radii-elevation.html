@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .demo { background: var(--bg-elev); padding: 14px 16px; box-sizing: border-box; min-height: 96px; display: flex; flex-direction: column; justify-content: space-between; }
+  .demo .name { font-family: var(--font-mono); font-size: 10px; color: var(--fg-faint); letter-spacing: 0.12em; }
+  .demo .val { font-family: var(--font-mono); font-size: 9px; color: var(--paper-300); }
+  .r-none { border: 1px solid var(--border); }
+  .r-xs   { border: 1px solid var(--border); border-radius: 1px; }
+  .r-sm   { border: 1px solid var(--border); border-radius: 2px; }
+  .r-md   { border: 1px solid var(--border); border-radius: 4px; }
+  .r-pill { border: 1px solid var(--border); border-radius: 999px; height: 36px; min-height:36px; padding: 0 18px; flex-direction: row; align-items: center; justify-content: space-between; }
+  .e1 { box-shadow: var(--shadow-1); border:1px solid var(--border-faint); }
+  .e2 { box-shadow: var(--shadow-2); border:1px solid var(--border-faint); }
+  .glow { background: var(--shu-500); color: var(--paper-50); border: 0; box-shadow: var(--shadow-glow-shu); }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">08 / Radii — restrained, almost square</div>
+  <div class="grid" style="margin-bottom: 22px;">
+    <div class="demo r-none"><div class="name">r-none</div><div class="val">0px</div></div>
+    <div class="demo r-sm"><div class="name">r-sm</div><div class="val">2px</div></div>
+    <div class="demo r-md"><div class="name">r-md (default)</div><div class="val">4px</div></div>
+  </div>
+  <div class="lbl">09 / Elevation</div>
+  <div class="grid">
+    <div class="demo e1"><div class="name">shadow-1</div><div class="val">subtle drop + inset top</div></div>
+    <div class="demo e2"><div class="name">shadow-2</div><div class="val">card / panel</div></div>
+    <div class="demo glow" style="font-family: var(--font-mincho); font-size: 16px; color: var(--paper-50); justify-content: center; align-items: center;">扉を開ける</div>
+  </div>
+</div>
+</body></html>

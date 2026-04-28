@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="../colors_and_type.css"/>
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .card { width: 700px; padding: 28px 32px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .grain { position: absolute; inset: 0; pointer-events: none;
+    background-image: url('../assets/textures/grain.svg'); background-size: 240px 240px;
+    opacity: 0.08; mix-blend-mode: overlay; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.32em; color: var(--fg-faint); text-transform: uppercase; margin-bottom: 18px; }
+  .row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; height: 44px; padding: 0 22px; font-family: var(--font-mincho); font-size: 16px; cursor: pointer; transition: all 240ms cubic-bezier(0.22,0.61,0.36,1); border-radius: 2px; box-sizing: border-box; }
+  .btn-primary { background: var(--shu-500); color: var(--paper-50); border: 1px solid var(--shu-400); }
+  .btn-primary:hover { background: var(--shu-400); box-shadow: var(--shadow-glow-shu); }
+  .btn-ghost { background: transparent; color: var(--paper-50); border: 1px solid var(--border-strong); }
+  .btn-ghost:hover { border-color: var(--paper-200); color: var(--paper-50); background: rgba(244,237,224,0.04); }
+  .btn-link { background: transparent; color: var(--paper-200); border: 0; padding: 0; height: auto; font-family: var(--font-gothic); font-size: 14px; text-decoration: underline; text-decoration-color: rgba(232,224,207,0.4); text-underline-offset: 4px; }
+  .btn-link:hover { color: var(--shu-300); }
+  .arr { font-family: var(--font-mono); font-size: 14px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="grain"></div>
+  <div class="lbl">10 / Buttons</div>
+  <div class="row">
+    <button class="btn btn-primary">扉を開ける <span class="arr">→</span></button>
+    <button class="btn btn-ghost">もうすこし読む</button>
+    <button class="btn-link">手紙を書く →</button>
+  </div>
+</div>
+</body></html>
